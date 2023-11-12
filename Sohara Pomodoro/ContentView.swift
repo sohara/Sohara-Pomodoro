@@ -10,14 +10,35 @@ import SwiftUI
 struct ContentView: View {
     @State private var timeRemaining = 1500 // 25 minutes in seconds
     @State private var timer: Timer?
+    @State private var isTimerRunning = false
+    @State private var timerStarted = false
 
     func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            if timeRemaining > 0 {
-                timeRemaining -= 1
-            } else {
-                timer?.invalidate()
+        // Only create a timer if it's not already running
+        if !isTimerRunning {
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                if timeRemaining > 0 {
+                    timeRemaining -= 1
+                } else {
+                    stopTimer()
+                }
             }
+            isTimerRunning = true
+            timerStarted = true
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+        isTimerRunning = false
+    }
+    
+    func pauseResumeTimer() {
+        if isTimerRunning {
+            stopTimer()
+        } else {
+            startTimer()
         }
     }
     
@@ -35,12 +56,15 @@ struct ContentView: View {
             Button("Start") {
                 startTimer()
             }
-            Button("Pause") {
-                timer?.invalidate()
+            Button(timerStarted && isTimerRunning ? "Pause" : "Resume") {
+                pauseResumeTimer()
             }
+            .disabled(!timerStarted)
+            .opacity(timerStarted ? 1 : 0.3)
             Button("Reset") {
-                timer?.invalidate()
+                stopTimer()
                 timeRemaining = 1500
+                timerStarted = false
             }
         }
         .padding()
