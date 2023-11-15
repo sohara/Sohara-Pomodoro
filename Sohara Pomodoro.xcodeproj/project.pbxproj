@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE5668E22B0561D500610CF4 /* reception-bell-14620.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE5668E12B0561D500610CF4 /* reception-bell-14620.mp3 */; };
 		DEF640D92B018B0D001512B0 /* Sohara_PomodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF640D82B018B0D001512B0 /* Sohara_PomodoroApp.swift */; };
 		DEF640DB2B018B0D001512B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF640DA2B018B0D001512B0 /* ContentView.swift */; };
 		DEF640DD2B018B0D001512B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF640DC2B018B0D001512B0 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE5668E12B0561D500610CF4 /* reception-bell-14620.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "reception-bell-14620.mp3"; sourceTree = "<group>"; };
 		DEF640D52B018B0D001512B0 /* Sohara Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sohara Pomodoro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF640D82B018B0D001512B0 /* Sohara_PomodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sohara_PomodoroApp.swift; sourceTree = "<group>"; };
 		DEF640DA2B018B0D001512B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				DEF640D82B018B0D001512B0 /* Sohara_PomodoroApp.swift */,
 				DEF640DA2B018B0D001512B0 /* ContentView.swift */,
 				DEF640DC2B018B0D001512B0 /* Assets.xcassets */,
+				DE5668E12B0561D500610CF4 /* reception-bell-14620.mp3 */,
 				DEF640DE2B018B0D001512B0 /* Sohara_Pomodoro.entitlements */,
 				DEF640DF2B018B0D001512B0 /* Preview Content */,
 			);
@@ -129,6 +132,7 @@
 			files = (
 				DEF640E12B018B0D001512B0 /* Preview Assets.xcassets in Resources */,
 				DEF640DD2B018B0D001512B0 /* Assets.xcassets in Resources */,
+				DE5668E22B0561D500610CF4 /* reception-bell-14620.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
