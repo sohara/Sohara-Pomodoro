@@ -10,11 +10,13 @@ import AVFoundation
 
 struct ContentView: View {
     let pomodoroDuration = 1500 // 25 minutes in seconds
+    let breakDuration = 300 // 5 minutes in seconds
     
     @State private var timeRemaining: Int
     @State private var timer: Timer?
     @State private var isTimerRunning = false
     @State private var timerStarted = false
+    @State private var isBreakTime = false
     @State private var showAlert = false
     @State private var audioPlayer: AVAudioPlayer?
 
@@ -38,7 +40,8 @@ struct ContentView: View {
     }
     
     func timeExpired() {
-        stopTimer()
+        isBreakTime.toggle()
+        timeRemaining = isBreakTime ? breakDuration : pomodoroDuration
         showAlert = true
         playSound()
     }
