@@ -111,6 +111,7 @@ struct ContentView: View {
                 }
             )
         }
+        .background(isBreakTime ? Color.green : Color(red: 0.9, green: 0.2, blue: 0.1, opacity: 0.9))
     }
 }
 
